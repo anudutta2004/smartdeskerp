@@ -452,23 +452,49 @@ app.post('/api/auth/login', (req, res) => {
 });
 
 // MODULE 2: EMPLOYEE MANAGEMENT ENDPOINTS
-app.post('/api/employees', (req, res) => {
+const handleCreateEmployee = (req: any, res: any) => {
   const db = loadDatabase();
-  const { name, email, mobile, address, position, joiningDate, password, role } = req.body;
+  const { 
+    name, 
+    email, 
+    mobile, 
+    address, 
+    position, 
+    joiningDate, 
+    password, 
+    role, 
+    username, 
+    baseSalary, 
+    bankAccount 
+  } = req.body;
 
   if (!name || !email || !mobile) {
     return res.status(400).json({ error: "Missing required fields: name, email, mobile." });
   }
 
-  // Check unique username which is email suffix based or simplified
-  const username = name.toLowerCase().split(' ')[0] + Math.floor(Math.random() * 90 + 10);
-  const employeeId = `EMP-${Math.floor(100+Math.random()*900)}`;
+  // Choose a username: provided username or generate one based on name
+  let finalUsername = (username || name.toLowerCase().split(' ')[0] + Math.floor(Math.random() * 90 + 10)).toLowerCase().trim();
 
-  // Default hashed password match 'emp123'
+  // Ensure username is unique
+  const exists = db.users.some((u: any) => u.username.toLowerCase() === finalUsername);
+  if (exists) {
+    return res.status(400).json({ error: `Username '${finalUsername}' is already taken.` });
+  }
+
+  const employeeId = `EMP-${Math.floor(100 + Math.random() * 900)}`;
+
+  let finalPasswordHash = "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480"; // default for 'emp123'
+  const rawPassword = password || "emp123";
+  if (rawPassword === "admin123") {
+    finalPasswordHash = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918";
+  } else if (rawPassword !== "emp123" && rawPassword !== "sd123456") {
+    finalPasswordHash = rawPassword; // support arbitrary custom passwords directly
+  }
+
   const newEmp = {
     id: `usr_${Date.now()}`,
-    username,
-    passwordHash: "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480", // emp123
+    username: finalUsername,
+    passwordHash: finalPasswordHash,
     name,
     email,
     role: role || "Employee",
@@ -476,7 +502,9 @@ app.post('/api/employees', (req, res) => {
     position: position || "Sales Associate",
     address: address || "Kolkata, India",
     joiningDate: joiningDate || new Date().toISOString().split('T')[0],
-    status: "Active"
+    status: "Active",
+    baseSalary: Number(baseSalary || 25000),
+    bankAccount: bankAccount || ""
   };
 
   db.users.push(newEmp);
@@ -491,12 +519,28 @@ app.post('/api/employees', (req, res) => {
   });
 
   saveDatabase(db);
-  res.json({ success: true, employee: newEmp, db });
-});
+  res.json({ success: true, user: newEmp, employee: newEmp, db });
+};
 
-app.put('/api/employees/:id', (req, res) => {
+app.post('/api/employees', handleCreateEmployee);
+app.post('/api/auth/register', handleCreateEmployee);
+
+const handleUpdateEmployee = (req: any, res: any) => {
   const db = loadDatabase();
-  const { name, email, mobile, address, position, status, password, currentUsername } = req.body;
+  const { 
+    name, 
+    email, 
+    mobile, 
+    address, 
+    position, 
+    status, 
+    password, 
+    currentUsername,
+    baseSalary,
+    bankAccount,
+    role
+  } = req.body;
+  
   const userIdx = db.users.findIndex((u: any) => u.id === req.params.id);
 
   if (userIdx === -1) {
@@ -511,12 +555,21 @@ app.put('/api/employees/:id', (req, res) => {
     ...(mobile !== undefined && { mobile }),
     ...(address !== undefined && { address }),
     ...(position !== undefined && { position }),
-    ...(status !== undefined && { status })
+    ...(status !== undefined && { status }),
+    ...(baseSalary !== undefined && { baseSalary: Number(baseSalary) }),
+    ...(bankAccount !== undefined && { bankAccount }),
+    ...(role !== undefined && { role })
   };
 
   if (password) {
     // Set simulated hashed password
-    updatedUser.passwordHash = password === "emp123" ? "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480" : "custom_hash";
+    if (password === "emp123") {
+      updatedUser.passwordHash = "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480";
+    } else if (password === "admin123") {
+      updatedUser.passwordHash = "8c6976e5b5410415bde908bd4dee15dfb167a9c853fc4bb8a81f6f2ab448a918";
+    } else {
+      updatedUser.passwordHash = password;
+    }
   }
 
   db.users[userIdx] = updatedUser;
@@ -531,8 +584,11 @@ app.put('/api/employees/:id', (req, res) => {
   });
 
   saveDatabase(db);
-  res.json({ success: true, employee: updatedUser, db });
-});
+  res.json({ success: true, user: updatedUser, employee: updatedUser, db });
+};
+
+app.put('/api/employees/:id', handleUpdateEmployee);
+app.put('/api/users/:id', handleUpdateEmployee);
 
 // MODULE 3: INVENTORY MANAGEMENT ENDPOINTS
 app.post('/api/inventory', (req, res) => {

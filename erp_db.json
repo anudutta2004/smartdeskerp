@@ -1,0 +1,417 @@
+{
+  "users": [
+    {
+      "id": "usr_1",
+      "username": "admin",
+      "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+      "name": "Aniket Dutta",
+      "email": "support@smartdeskerp.com",
+      "role": "Admin",
+      "mobile": "+91 9876543210",
+      "position": "Business Owner",
+      "address": "M G Road, Sector 5, Kolkata, India",
+      "joiningDate": "2024-01-10",
+      "status": "Active",
+      "monthlySalary": 75000
+    },
+    {
+      "id": "usr_2",
+      "username": "elena",
+      "passwordHash": "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480",
+      "name": "Elena Gilbert",
+      "email": "elena@smartdeskerp.com",
+      "role": "Employee",
+      "mobile": "+91 8888877777",
+      "position": "Sales Associate",
+      "address": "Mystic Falls Suite, Mall Road, Kolkata",
+      "joiningDate": "2025-05-15",
+      "status": "Active",
+      "monthlySalary": 25000
+    },
+    {
+      "id": "usr_3",
+      "username": "dave",
+      "passwordHash": "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480",
+      "name": "Dave Matthews",
+      "email": "dave@smartdeskerp.com",
+      "role": "Employee",
+      "mobile": "+91 9192939495",
+      "position": "Inventory Coordinator",
+      "address": "Distributor Hub Alley, Kolkata",
+      "joiningDate": "2025-08-01",
+      "status": "Disabled",
+      "monthlySalary": 20000
+    }
+  ],
+  "inventory": [
+    {
+      "id": "prod_1",
+      "name": "Lumina X Pro Monitor",
+      "sku": "LUM-X-PRO-01",
+      "category": "Electronics",
+      "purchasePrice": 1200,
+      "sellingPrice": 1850,
+      "quantity": 4,
+      "supplier": "Sato OEM Mfg Ltd",
+      "barcode": "8809121903",
+      "gstRate": 18
+    },
+    {
+      "id": "prod_2",
+      "name": "Skyline Mechanical Keyboard",
+      "sku": "SKY-KEY-MECH-02",
+      "category": "Computer peripherals",
+      "purchasePrice": 85,
+      "sellingPrice": 149,
+      "quantity": 15,
+      "supplier": "Global Hardware Corp",
+      "barcode": "7102910398",
+      "gstRate": 18
+    },
+    {
+      "id": "prod_3",
+      "name": "MetaBoard Elite v4",
+      "sku": "MET-BD-V4-03",
+      "category": "Computer peripherals",
+      "purchasePrice": 250,
+      "sellingPrice": 420,
+      "quantity": 35,
+      "supplier": "Aura Parts distributor",
+      "barcode": "4401928012",
+      "gstRate": 18
+    },
+    {
+      "id": "prod_4",
+      "name": "USB-C Heavy Duty Cable 2m",
+      "sku": "WIRE-LGT-USBC",
+      "category": "Accessories",
+      "purchasePrice": 5,
+      "sellingPrice": 19,
+      "quantity": 8,
+      "supplier": "Continental Accessories Ltd",
+      "barcode": "1109489244",
+      "gstRate": 18
+    },
+    {
+      "id": "prod_5",
+      "name": "Dual Monitor Gas Arm Stand",
+      "sku": "MON-MNT-DUAL",
+      "category": "Office Furniture",
+      "purchasePrice": 110,
+      "sellingPrice": 245,
+      "quantity": 12,
+      "supplier": "Sato OEM Mfg Ltd",
+      "barcode": "9940192381",
+      "gstRate": 18
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust_1",
+      "name": "John Miller Logistics",
+      "mobile": "+91 9001122334",
+      "email": "john@millerlogistics.in",
+      "address": "Chittaranjan Avenue, Kolkata, West Bengal",
+      "createdAt": "2026-05-01T10:00:00Z"
+    },
+    {
+      "id": "cust_2",
+      "name": "Markus Vance Estates",
+      "mobile": "+91 9443322110",
+      "email": "vance@realestateholdings.in",
+      "address": "Park Street Crossing, Suite 40, Kolkata",
+      "createdAt": "2026-06-02T14:30:00Z"
+    },
+    {
+      "id": "cust_3",
+      "name": "Sarah Retail Enterprises",
+      "mobile": "+91 9123456789",
+      "email": "sarah@cyberdyneretail.com",
+      "address": "Salt Lake Sector 5, block GP, Kolkata",
+      "createdAt": "2026-06-10T12:00:00Z"
+    }
+  ],
+  "sales": [
+    {
+      "id": "inv_1",
+      "invoiceNumber": "INV-2026-001",
+      "companyName": "SmartDeskERP Retail",
+      "customerName": "John Miller Logistics",
+      "customerId": "cust_1",
+      "items": [
+        {
+          "productId": "prod_1",
+          "name": "Lumina X Pro Monitor",
+          "quantity": 2,
+          "price": 1850,
+          "total": 3700
+        },
+        {
+          "productId": "prod_2",
+          "name": "Skyline Mechanical Keyboard",
+          "quantity": 3,
+          "price": 149,
+          "total": 447
+        }
+      ],
+      "subtotal": 4147,
+      "tax": 342.13,
+      "totalAmount": 4489.13,
+      "createdAt": "2026-06-12T10:30:00Z",
+      "createdBy": "elena",
+      "status": "Paid"
+    },
+    {
+      "id": "inv_2",
+      "invoiceNumber": "INV-2026-002",
+      "companyName": "SmartDeskERP Retail",
+      "customerName": "Walk-In Customer",
+      "customerId": "walk-in",
+      "items": [
+        {
+          "productId": "prod_4",
+          "name": "USB-C Heavy Duty Cable 2m",
+          "quantity": 2,
+          "price": 19,
+          "total": 38
+        }
+      ],
+      "subtotal": 38,
+      "tax": 3.14,
+      "totalAmount": 41.14,
+      "createdAt": "2026-06-15T15:42:00Z",
+      "createdBy": "admin",
+      "status": "Paid"
+    },
+    {
+      "id": "inv_3",
+      "invoiceNumber": "INV-2026-003",
+      "companyName": "SmartDeskERP Retail",
+      "customerName": "Markus Vance Estates",
+      "customerId": "cust_2",
+      "items": [
+        {
+          "productId": "prod_1",
+          "name": "Lumina X Pro Monitor",
+          "quantity": 1,
+          "price": 1850,
+          "total": 1850
+        },
+        {
+          "productId": "prod_3",
+          "name": "MetaBoard Elite v4",
+          "quantity": 5,
+          "price": 420,
+          "total": 2100
+        }
+      ],
+      "subtotal": 3950,
+      "tax": 325.88,
+      "totalAmount": 4275.88,
+      "createdAt": "2026-06-16T11:20:00Z",
+      "createdBy": "elena",
+      "status": "Paid"
+    },
+    {
+      "id": "inv_prev_1",
+      "invoiceNumber": "INV-2026-OLD-1",
+      "companyName": "SmartDeskERP Retail",
+      "customerName": "Walk-In Customer",
+      "customerId": "walk-in",
+      "items": [
+        {
+          "productId": "prod_3",
+          "name": "MetaBoard Elite v4",
+          "quantity": 10,
+          "price": 420,
+          "total": 4200
+        }
+      ],
+      "subtotal": 4200,
+      "tax": 346.5,
+      "totalAmount": 4546.5,
+      "createdAt": "2026-05-18T14:00:00Z",
+      "createdBy": "admin",
+      "status": "Paid"
+    },
+    {
+      "id": "inv_prev_2",
+      "invoiceNumber": "INV-2026-OLD-2",
+      "companyName": "SmartDeskERP Retail",
+      "customerName": "John Miller Logistics",
+      "customerId": "cust_1",
+      "items": [
+        {
+          "productId": "prod_2",
+          "name": "Skyline Mechanical Keyboard",
+          "quantity": 10,
+          "price": 149,
+          "total": 1490
+        }
+      ],
+      "subtotal": 1490,
+      "tax": 122.93,
+      "totalAmount": 1612.93,
+      "createdAt": "2026-05-25T11:15:00Z",
+      "createdBy": "elena",
+      "status": "Paid"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "exp_1",
+      "category": "Rent",
+      "amount": 2500,
+      "date": "2026-06-01",
+      "description": "Monthly warehouse lease segment"
+    },
+    {
+      "id": "exp_2",
+      "category": "Salary",
+      "amount": 3200,
+      "date": "2026-06-10",
+      "description": "Elena Gilbert June salary disbursement"
+    },
+    {
+      "id": "exp_3",
+      "category": "Electricity",
+      "amount": 350,
+      "date": "2026-06-05",
+      "description": "Retail center power grid utility"
+    },
+    {
+      "id": "exp_4",
+      "category": "Internet",
+      "amount": 99,
+      "date": "2026-06-07",
+      "description": "High-speed broadband network"
+    },
+    {
+      "id": "exp_5",
+      "category": "Maintenance",
+      "amount": 210,
+      "date": "2026-06-14",
+      "description": "Shop floor fixture repairs"
+    }
+  ],
+  "logs": [
+    {
+      "id": "log_1781698533674",
+      "timestamp": "2026-06-17T12:15:33.674Z",
+      "user": "admin",
+      "action": "User Login",
+      "details": "Admin workspace initialized via secure verification."
+    },
+    {
+      "id": "log_1",
+      "timestamp": "2026-06-16T09:00:00Z",
+      "user": "admin",
+      "action": "User Login",
+      "details": "Admin account logged in on desktop console."
+    },
+    {
+      "id": "log_2",
+      "timestamp": "2026-06-16T11:21:00Z",
+      "user": "elena",
+      "action": "Issued Invoice",
+      "details": "Created INV-2026-003 for Markus Vance Estates."
+    },
+    {
+      "id": "log_3",
+      "timestamp": "2026-06-16T14:40:00Z",
+      "user": "admin",
+      "action": "Inventory Stock In",
+      "details": "Added 10 units Skyline Mechanical Keyboards."
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "sup_1",
+      "name": "Sato OEM Mfg Ltd",
+      "mobile": "+91 9898989801",
+      "gstNumber": "19SATO8892A1Z4",
+      "address": "Sector 3, Salt Lake, Kolkata, India"
+    },
+    {
+      "id": "sup_2",
+      "name": "Global Hardware Corp",
+      "mobile": "+91 7878787802",
+      "gstNumber": "19GLOB1123K1Z3",
+      "address": "Chandni Chowk, Kolkata, West Bengal"
+    },
+    {
+      "id": "sup_3",
+      "name": "Aura Parts distributor",
+      "mobile": "+91 8181818103",
+      "gstNumber": "19AURA9981B1Z2",
+      "address": "Howrah Industrial Belt, Kolkata"
+    }
+  ],
+  "purchases": [
+    {
+      "id": "pur_1",
+      "purchaseNumber": "PUR-2026-10101",
+      "supplierId": "sup_1",
+      "supplierName": "Sato OEM Mfg Ltd",
+      "items": [
+        {
+          "productId": "prod_1",
+          "name": "Lumina X Pro Monitor",
+          "quantity": 10,
+          "purchasePrice": 1200,
+          "total": 12000
+        }
+      ],
+      "subtotal": 12000,
+      "cgst": 1080,
+      "sgst": 1080,
+      "igst": 0,
+      "totalAmount": 14160,
+      "date": "2026-06-10",
+      "createdBy": "admin",
+      "status": "Completed"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "att_1",
+      "employeeId": "usr_2",
+      "employeeName": "Elena Gilbert",
+      "date": "2026-06-16",
+      "status": "Present"
+    },
+    {
+      "id": "att_2",
+      "employeeId": "usr_3",
+      "employeeName": "Dave Matthews",
+      "date": "2026-06-16",
+      "status": "Absent"
+    }
+  ],
+  "payroll": [
+    {
+      "id": "pay_1",
+      "employeeId": "usr_2",
+      "employeeName": "Elena Gilbert",
+      "month": "2026-05",
+      "baseSalary": 25000,
+      "bonus": 2000,
+      "deductions": 500,
+      "netPaid": 26500,
+      "paymentDate": "2026-05-31",
+      "status": "Paid"
+    }
+  ],
+  "settings": {
+    "companyName": "SmartDesk ERP Ltd",
+    "logoText": "SD",
+    "logoBgColor": "#3B82F6",
+    "gstNumber": "19AAAAA1111A1Z1",
+    "businessAddress": "M G Road, Sector 5, Kolkata, India",
+    "contactNumber": "+91 9876543210",
+    "invoicePrefix": "SD-INV",
+    "userManagementActive": true
+  },
+  "returns": [],
+  "replacements": []
+}

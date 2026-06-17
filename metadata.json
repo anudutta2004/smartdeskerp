@@ -1,0 +1,6 @@
+{
+  "name": "SmartDeskERP",
+  "description": "A lightweight, AI-powered ERP system designed for SMBs, retail shops, trading businesses, and distributors, featuring secure login permissions, POS billing, inventory categories, and a SmartDesk Gemini Assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

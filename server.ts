@@ -1776,9 +1776,9 @@ if (!isProduction) {
   });
 } else {
   console.log("Serving pre-compiled static SmartDeskERP assets...");
-  app.use(express.static(path.resolve(__dirname, 'dist')));
+  app.use(express.static(__dirname));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'dist/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
   });
 }
 

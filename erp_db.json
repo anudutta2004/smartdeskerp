@@ -16,24 +16,24 @@
     },
     {
       "id": "usr_2",
-      "username": "elena",
+      "username": "payel",
       "passwordHash": "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480",
-      "name": "Elena Gilbert",
-      "email": "elena@smartdeskerp.com",
+      "name": "Payel Banerjee",
+      "email": "payel@smartdeskerp.com",
       "role": "Employee",
       "mobile": "+91 8888877777",
       "position": "Sales Associate",
-      "address": "Mystic Falls Suite, Mall Road, Kolkata",
+      "address": "Suri, Birbhum, West bengal",
       "joiningDate": "2025-05-15",
       "status": "Active",
       "monthlySalary": 25000
     },
     {
       "id": "usr_3",
-      "username": "dave",
+      "username": "pritam",
       "passwordHash": "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480",
-      "name": "Dave Matthews",
-      "email": "dave@smartdeskerp.com",
+      "name": "Pritam Saha",
+      "email": "pritam@smartdeskerp.com",
       "role": "Employee",
       "mobile": "+91 9192939495",
       "position": "Inventory Coordinator",
@@ -51,7 +51,7 @@
       "category": "Electronics",
       "purchasePrice": 1200,
       "sellingPrice": 1850,
-      "quantity": 4,
+      "quantity": 2,
       "supplier": "Sato OEM Mfg Ltd",
       "barcode": "8809121903",
       "gstRate": 18
@@ -63,7 +63,7 @@
       "category": "Computer peripherals",
       "purchasePrice": 85,
       "sellingPrice": 149,
-      "quantity": 15,
+      "quantity": 18,
       "supplier": "Global Hardware Corp",
       "barcode": "7102910398",
       "gstRate": 18
@@ -75,7 +75,7 @@
       "category": "Computer peripherals",
       "purchasePrice": 250,
       "sellingPrice": 420,
-      "quantity": 35,
+      "quantity": 8,
       "supplier": "Aura Parts distributor",
       "barcode": "4401928012",
       "gstRate": 18
@@ -103,30 +103,42 @@
       "supplier": "Sato OEM Mfg Ltd",
       "barcode": "9940192381",
       "gstRate": 18
+    },
+    {
+      "id": "dmg_1781762920538",
+      "name": "[Damaged] USB-C Heavy Duty Cable 2m",
+      "sku": "DMG-WIRE-LGT-USBC",
+      "category": "Damaged Stock",
+      "purchasePrice": 5,
+      "sellingPrice": 0,
+      "quantity": 0,
+      "supplier": "Continental Accessories Ltd",
+      "barcode": "DMG-1109489244",
+      "gstRate": 18
     }
   ],
   "customers": [
     {
       "id": "cust_1",
-      "name": "John Miller Logistics",
+      "name": "Saha & Sons Transport",
       "mobile": "+91 9001122334",
-      "email": "john@millerlogistics.in",
+      "email": "Saha285@gmail.in",
       "address": "Chittaranjan Avenue, Kolkata, West Bengal",
       "createdAt": "2026-05-01T10:00:00Z"
     },
     {
       "id": "cust_2",
-      "name": "Markus Vance Estates",
+      "name": "Mukherjee Realtors",
       "mobile": "+91 9443322110",
-      "email": "vance@realestateholdings.in",
+      "email": "mukherjee@gmail.in",
       "address": "Park Street Crossing, Suite 40, Kolkata",
       "createdAt": "2026-06-02T14:30:00Z"
     },
     {
       "id": "cust_3",
-      "name": "Sarah Retail Enterprises",
+      "name": "Dutta Retail Agency",
       "mobile": "+91 9123456789",
-      "email": "sarah@cyberdyneretail.com",
+      "email": "dutta@gmail.com",
       "address": "Salt Lake Sector 5, block GP, Kolkata",
       "createdAt": "2026-06-10T12:00:00Z"
     }
@@ -136,7 +148,7 @@
       "id": "inv_1",
       "invoiceNumber": "INV-2026-001",
       "companyName": "SmartDeskERP Retail",
-      "customerName": "John Miller Logistics",
+      "customerName": "Saha & Sons Transport",
       "customerId": "cust_1",
       "items": [
         {
@@ -158,8 +170,8 @@
       "tax": 342.13,
       "totalAmount": 4489.13,
       "createdAt": "2026-06-12T10:30:00Z",
-      "createdBy": "elena",
-      "status": "Paid"
+      "createdBy": "payel",
+      "status": "Returned"
     },
     {
       "id": "inv_2",
@@ -187,7 +199,7 @@
       "id": "inv_3",
       "invoiceNumber": "INV-2026-003",
       "companyName": "SmartDeskERP Retail",
-      "customerName": "Markus Vance Estates",
+      "customerName": "Mukherjee Realtors",
       "customerId": "cust_2",
       "items": [
         {
@@ -209,7 +221,7 @@
       "tax": 325.88,
       "totalAmount": 4275.88,
       "createdAt": "2026-06-16T11:20:00Z",
-      "createdBy": "elena",
+      "createdBy": "payel",
       "status": "Paid"
     },
     {
@@ -238,7 +250,7 @@
       "id": "inv_prev_2",
       "invoiceNumber": "INV-2026-OLD-2",
       "companyName": "SmartDeskERP Retail",
-      "customerName": "John Miller Logistics",
+      "customerName": "Saha & Sons Transport",
       "customerId": "cust_1",
       "items": [
         {
@@ -253,7 +265,80 @@
       "tax": 122.93,
       "totalAmount": 1612.93,
       "createdAt": "2026-05-25T11:15:00Z",
-      "createdBy": "elena",
+      "createdBy": "payel",
+      "status": "Paid"
+    },
+    {
+      "id": "inv_1781762840898",
+      "invoiceNumber": "SD-INV-2026-40700",
+      "companyName": "SmartDesk ERP Ltd",
+      "customerName": "Walk-In Customer",
+      "customerMobile": "",
+      "customerId": "walk-in",
+      "items": [
+        {
+          "productId": "prod_1",
+          "name": "Lumina X Pro Monitor",
+          "quantity": 9,
+          "price": 1850,
+          "gstRate": 18,
+          "cgstAmount": 1498.5,
+          "sgstAmount": 1498.5,
+          "igstAmount": 0,
+          "total": 19647
+        }
+      ],
+      "subtotal": 16650,
+      "cgst": 1498.5,
+      "sgst": 1498.5,
+      "igst": 0,
+      "gstAmount": 2997,
+      "totalAmount": 19647,
+      "paymentMethod": "UPI",
+      "createdAt": "2026-06-18T06:07:20.898Z",
+      "createdBy": "admin",
+      "status": "Paid"
+    },
+    {
+      "id": "inv_1781764412416",
+      "invoiceNumber": "SD-INV-2026-71749",
+      "companyName": "SmartDesk ERP Ltd",
+      "customerName": "aniket",
+      "customerMobile": "1234567890",
+      "customerId": "walk-in",
+      "items": [
+        {
+          "productId": "dmg_1781762920538",
+          "name": "[Damaged] USB-C Heavy Duty Cable 2m",
+          "quantity": 2,
+          "price": 0,
+          "gstRate": 18,
+          "cgstAmount": 0,
+          "sgstAmount": 0,
+          "igstAmount": 0,
+          "total": 0
+        },
+        {
+          "productId": "prod_3",
+          "name": "MetaBoard Elite v4",
+          "quantity": 27,
+          "price": 420,
+          "gstRate": 18,
+          "cgstAmount": 1020.5999999999999,
+          "sgstAmount": 1020.5999999999999,
+          "igstAmount": 0,
+          "total": 13381.2
+        }
+      ],
+      "subtotal": 11340,
+      "cgst": 1020.5999999999999,
+      "sgst": 1020.5999999999999,
+      "igst": 0,
+      "gstAmount": 2041.1999999999998,
+      "totalAmount": 13381.2,
+      "paymentMethod": "UPI",
+      "createdAt": "2026-06-18T06:33:32.416Z",
+      "createdBy": "admin",
       "status": "Paid"
     }
   ],
@@ -270,7 +355,7 @@
       "category": "Salary",
       "amount": 3200,
       "date": "2026-06-10",
-      "description": "Elena Gilbert June salary disbursement"
+      "description": "Payel Banerjee June salary disbursement"
     },
     {
       "id": "exp_3",
@@ -296,6 +381,55 @@
   ],
   "logs": [
     {
+      "id": "log_1781764412416",
+      "timestamp": "2026-06-18T06:33:32.416Z",
+      "user": "admin",
+      "action": "POS Sale Checkout",
+      "details": "Issued Sales invoice SD-INV-2026-71749 to 'aniket' (Mobile: 1234567890) totaling ₹ 13381.20 split GST ₹ 2041.20."
+    },
+    {
+      "id": "log_1781762920538",
+      "timestamp": "2026-06-18T06:08:40.538Z",
+      "user": "admin",
+      "action": "Return Created",
+      "details": "Customer 'Walk-In Customer' returned 2 units of 'USB-C Heavy Duty Cable 2m' (Defective Product) - Action: Refund. Status of refund: Approved."
+    },
+    {
+      "id": "log_1781762840898",
+      "timestamp": "2026-06-18T06:07:20.898Z",
+      "user": "admin",
+      "action": "POS Sale Checkout",
+      "details": "Issued Sales invoice SD-INV-2026-40700 to 'Walk-In Customer' (Mobile: N/A) totaling ₹ 19647.00 split GST ₹ 2997.00."
+    },
+    {
+      "id": "log_1781762825340",
+      "timestamp": "2026-06-18T06:07:05.340Z",
+      "user": "admin",
+      "action": "Purchase Return",
+      "details": "Refunded / Returned materials for purchase PUR-2026-10101. Decremented local stockpile levels."
+    },
+    {
+      "id": "log_1781762817161",
+      "timestamp": "2026-06-18T06:06:57.161Z",
+      "user": "admin",
+      "action": "Material Check-in",
+      "details": "Created Purchase Entry PUR-2026-41728 from 'Global Hardware Corp' totaling ₹ 21240.00."
+    },
+    {
+      "id": "log_1781762715533",
+      "timestamp": "2026-06-18T06:05:15.533Z",
+      "user": "admin",
+      "action": "Invoice Return",
+      "details": "Processed refund/return for sales invoice INV-2026-001. Restored item counts to physical stockpile."
+    },
+    {
+      "id": "log_1781762701544",
+      "timestamp": "2026-06-18T06:05:01.544Z",
+      "user": "admin",
+      "action": "User Login",
+      "details": "Admin workspace initialized via secure verification."
+    },
+    {
       "id": "log_1781698533674",
       "timestamp": "2026-06-17T12:15:33.674Z",
       "user": "admin",
@@ -312,9 +446,9 @@
     {
       "id": "log_2",
       "timestamp": "2026-06-16T11:21:00Z",
-      "user": "elena",
+      "user": "payel",
       "action": "Issued Invoice",
-      "details": "Created INV-2026-003 for Markus Vance Estates."
+      "details": "Created INV-2026-003 for Mukherjee Realtors."
     },
     {
       "id": "log_3",
@@ -369,6 +503,29 @@
       "totalAmount": 14160,
       "date": "2026-06-10",
       "createdBy": "admin",
+      "status": "Returned"
+    },
+    {
+      "id": "pur_1781762817161",
+      "purchaseNumber": "PUR-2026-41728",
+      "supplierId": "sup_2",
+      "supplierName": "Global Hardware Corp",
+      "items": [
+        {
+          "productId": "prod_1",
+          "name": "Lumina X Pro Monitor",
+          "quantity": 15,
+          "purchasePrice": 1200,
+          "gstRate": 18
+        }
+      ],
+      "subtotal": 18000,
+      "cgst": 1620,
+      "sgst": 1620,
+      "igst": 0,
+      "totalAmount": 21240,
+      "date": "2026-06-18",
+      "createdBy": "admin",
       "status": "Completed"
     }
   ],
@@ -376,14 +533,14 @@
     {
       "id": "att_1",
       "employeeId": "usr_2",
-      "employeeName": "Elena Gilbert",
+      "employeeName": "Payel Banerjee",
       "date": "2026-06-16",
       "status": "Present"
     },
     {
       "id": "att_2",
       "employeeId": "usr_3",
-      "employeeName": "Dave Matthews",
+      "employeeName": "Pritam Saha",
       "date": "2026-06-16",
       "status": "Absent"
     }
@@ -392,7 +549,7 @@
     {
       "id": "pay_1",
       "employeeId": "usr_2",
-      "employeeName": "Elena Gilbert",
+      "employeeName": "Payel Banerjee",
       "month": "2026-05",
       "baseSalary": 25000,
       "bonus": 2000,
@@ -412,6 +569,25 @@
     "invoicePrefix": "SD-INV",
     "userManagementActive": true
   },
-  "returns": [],
+  "returns": [
+    {
+      "id": "ret_1781762920538",
+      "returnNumber": "RET-767857",
+      "invoiceId": "inv_2",
+      "invoiceNumber": "INV-2026-002",
+      "customerId": "walk-in",
+      "customerName": "Walk-In Customer",
+      "customerMobile": "",
+      "productId": "prod_4",
+      "productName": "USB-C Heavy Duty Cable 2m",
+      "quantity": 2,
+      "returnReason": "Defective Product",
+      "actionChosen": "Refund",
+      "totalRefundAmount": 38,
+      "status": "Approved",
+      "createdBy": "admin",
+      "createdAt": "2026-06-18T06:08:40.538Z"
+    }
+  ],
   "replacements": []
 }

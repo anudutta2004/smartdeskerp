@@ -530,7 +530,7 @@ export default function App() {
                   required
                   value={loginUsername}
                   onChange={(e) => setLoginUsername(e.target.value)}
-                  placeholder="e.g. admin or elena"
+                  placeholder="e.g. admin or payel"
                   className="w-full bg-slate-950 border border-slate-850 rounded-xl px-3.5 py-2.5 text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-blue-600 transition-all font-mono"
                 />
               </div>
@@ -573,7 +573,7 @@ export default function App() {
                 </div>
                 <div>
                   <span className="block font-bold text-slate-400">SALES EMPLOYEE:</span>
-                  <span className="block italic text-blue-400">User: elena</span>
+                  <span className="block italic text-blue-400">User: payel</span>
                   <span className="block italic text-blue-400">Pass: emp123</span>
                 </div>
               </div>
@@ -1194,7 +1194,7 @@ export default function App() {
                           required
                           value={custName}
                           onChange={(e) => setCustName(e.target.value)}
-                          placeholder="e.g. John Miller Operations"
+                          placeholder="e.g. Saha & Sons Operations"
                           className={`w-full p-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 ${
                             isDarkMode ? 'bg-slate-950 border border-slate-805' : 'bg-slate-50 border border-slate-300'
                           }`}

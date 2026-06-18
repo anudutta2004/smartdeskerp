@@ -49,23 +49,23 @@ const initialDBState = {
     },
     {
       id: "usr_2",
-      username: "elena",
+      username: "payel",
       passwordHash: "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480", // emp123
-      name: "Elena Gilbert",
-      email: "elena@smartdeskerp.com",
+      name: "Payel Banerjee",
+      email: "payel@smartdeskerp.com",
       role: "Employee",
       mobile: "+91 8888877777",
       position: "Sales Associate",
-      address: "Mystic Falls Suite, Mall Road, Kolkata",
+      address: "Suri, Birbhum, West bengal",
       joiningDate: "2025-05-15",
       status: "Active"
     },
     {
       id: "usr_3",
-      username: "dave",
+      username: "pritam",
       passwordHash: "6f52de20963ccdd29631b149b56f8f8f0ce4a3501bf00d5a3efcb1419747f480", // emp123
-      name: "Dave Matthews",
-      email: "dave@smartdeskerp.com",
+      name: "Pritam Saha",
+      email: "pritam@smartdeskerp.com",
       role: "Employee",
       mobile: "+91 9192939495",
       position: "Inventory Coordinator",
@@ -134,25 +134,25 @@ const initialDBState = {
   customers: [
     {
       id: "cust_1",
-      name: "John Miller Logistics",
+      name: "Saha & Sons Transport",
       mobile: "+91 9001122334",
-      email: "john@millerlogistics.in",
+      email: "saha285@millerlogistics.in",
       address: "Chittaranjan Avenue, Kolkata, West Bengal",
       createdAt: "2026-05-01T10:00:00Z"
     },
     {
       id: "cust_2",
-      name: "Markus Vance Estates",
+      name: "Mukherjee Realtors",
       mobile: "+91 9443322110",
-      email: "vance@realestateholdings.in",
+      email: "mukherjee@realestateholdings.in",
       address: "Park Street Crossing, Suite 40, Kolkata",
       createdAt: "2026-06-02T14:30:00Z"
     },
     {
       id: "cust_3",
-      name: "Sarah Retail Enterprises",
+      name: "Dutta Retail Agency",
       mobile: "+91 9123456789",
-      email: "sarah@cyberdyneretail.com",
+      email: "dutta@gmail.com",
       address: "Salt Lake Sector 5, block GP, Kolkata",
       createdAt: "2026-06-10T12:00:00Z"
     }
@@ -162,7 +162,7 @@ const initialDBState = {
       id: "inv_1",
       invoiceNumber: "INV-2026-001",
       companyName: "SmartDeskERP Retail",
-      customerName: "John Miller Logistics",
+      customerName: "Saha & Sons Transport",
       customerId: "cust_1",
       items: [
         { productId: "prod_1", name: "Lumina X Pro Monitor", quantity: 2, price: 1850, total: 3700 },
@@ -172,7 +172,7 @@ const initialDBState = {
       tax: 342.13, // 8.25% tax
       totalAmount: 4489.13,
       createdAt: "2026-06-12T10:30:00Z",
-      createdBy: "elena",
+      createdBy: "payel",
       status: "Paid"
     },
     {
@@ -195,7 +195,7 @@ const initialDBState = {
       id: "inv_3",
       invoiceNumber: "INV-2026-003",
       companyName: "SmartDeskERP Retail",
-      customerName: "Markus Vance Estates",
+      customerName: "Mukherjee Realtors",
       customerId: "cust_2",
       items: [
         { productId: "prod_1", name: "Lumina X Pro Monitor", quantity: 1, price: 1850, total: 1850 },
@@ -205,7 +205,7 @@ const initialDBState = {
       tax: 325.88,
       totalAmount: 4275.88,
       createdAt: "2026-06-16T11:20:00Z",
-      createdBy: "elena",
+      createdBy: "payel",
       status: "Paid"
     },
     // Seed sales for previous month (May 2026) to support monthly comparison requests!
@@ -229,7 +229,7 @@ const initialDBState = {
       id: "inv_prev_2",
       invoiceNumber: "INV-2026-OLD-2",
       companyName: "SmartDeskERP Retail",
-      customerName: "John Miller Logistics",
+      customerName: "Saha & Sons Transport",
       customerId: "cust_1",
       items: [
         { productId: "prod_2", name: "Skyline Mechanical Keyboard", quantity: 10, price: 149, total: 1490 }
@@ -238,20 +238,20 @@ const initialDBState = {
       tax: 122.93,
       totalAmount: 1612.93,
       createdAt: "2026-05-25T11:15:00Z",
-      createdBy: "elena",
+      createdBy: "payel",
       status: "Paid"
     }
   ],
   expenses: [
     { id: "exp_1", category: "Rent", amount: 2500, date: "2026-06-01", description: "Monthly warehouse lease segment" },
-    { id: "exp_2", category: "Salary", amount: 3200, date: "2026-06-10", description: "Elena Gilbert June salary disbursement" },
+    { id: "exp_2", category: "Salary", amount: 3200, date: "2026-06-10", description: "Payel Banerjee June salary disbursement" },
     { id: "exp_3", category: "Electricity", amount: 350, date: "2026-06-05", description: "Retail center power grid utility" },
     { id: "exp_4", category: "Internet", amount: 99, date: "2026-06-07", description: "High-speed broadband network" },
     { id: "exp_5", category: "Maintenance", amount: 210, date: "2026-06-14", description: "Shop floor fixture repairs" }
   ],
   logs: [
     { id: "log_1", timestamp: "2026-06-16T09:00:00Z", user: "admin", action: "User Login", details: "Admin account logged in on desktop console." },
-    { id: "log_2", timestamp: "2026-06-16T11:21:00Z", user: "elena", action: "Issued Invoice", details: "Created INV-2026-003 for Markus Vance Estates." },
+    { id: "log_2", timestamp: "2026-06-16T11:21:00Z", user: "payel", action: "Issued Invoice", details: "Created INV-2026-003 for Mukherjee Realtors." },
     { id: "log_3", timestamp: "2026-06-16T14:40:00Z", user: "admin", action: "Inventory Stock In", details: "Added 10 units Skyline Mechanical Keyboards." }
   ]
 };
@@ -296,15 +296,15 @@ function loadDatabase() {
   ];
 
   const defaultAttendance = [
-    { id: "att_1", employeeId: "usr_2", employeeName: "Elena Gilbert", date: "2026-06-16", status: "Present" },
-    { id: "att_2", employeeId: "usr_3", employeeName: "Dave Matthews", date: "2026-06-16", status: "Absent" }
+    { id: "att_1", employeeId: "usr_2", employeeName: "Payel Banerjee", date: "2026-06-16", status: "Present" },
+    { id: "att_2", employeeId: "usr_3", employeeName: "Pritam Saha", date: "2026-06-16", status: "Absent" }
   ];
 
   const defaultPayroll = [
     {
       id: "pay_1",
       employeeId: "usr_2",
-      employeeName: "Elena Gilbert",
+      employeeName: "Payel Banerjee",
       month: "2026-05",
       baseSalary: 25000,
       bonus: 2000,
@@ -339,7 +339,7 @@ function loadDatabase() {
         // Sanitize existing items
         data.users.forEach((u: any) => {
           if (u.monthlySalary === undefined) {
-            u.monthlySalary = u.role === "Admin" ? 75000 : u.username === "elena" ? 25000 : 20000;
+            u.monthlySalary = u.role === "Admin" ? 75000 : u.username === "payel" ? 25000 : 20000;
             modified = true;
           }
         });

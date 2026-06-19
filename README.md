@@ -1,20 +1,103 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🚀 SmartDeskERP
 
-# Run and deploy your AI Studio app
+### Enterprise Resource Planning System for Small & Medium Enterprises
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/6c695090-0b26-46bd-aafd-be62c811d500
+## 📖 Overview
 
-## Run Locally
+SmartDeskERP is a web-based Enterprise Resource Planning (ERP) system developed to streamline and automate core business operations for Small and Medium Enterprises (SMEs).
 
-**Prerequisites:**  Node.js
+The system integrates multiple modules including:
 
+- Employee Management
+- Attendance Tracking
+- Payroll Processing
+- Inventory Management
+- Supplier Management
+- Customer Management
+- Sales & Purchase Management
+- Business Analytics Dashboard
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## ✨ Key Features
+
+- Employee & HR Management
+- Attendance Monitoring
+- Payroll Processing
+- Inventory Control
+- Supplier Management
+- Customer Management
+- Sales Management
+- Purchase Management
+- Analytics Dashboard
+- Business Reports
+
+---
+
+## 🛠 Technology Stack
+
+### Front-End
+
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React
+- Recharts
+- Framer Motion
+
+### Back-End
+
+- Node.js
+- Express.js
+- TSX Runtime
+- Node Crypto API
+
+### Database
+
+- JSON Database (`erp_db.json`)
+
+### Development Tools
+
+- Visual Studio Code
+- NPM
+- Git & GitHub
+
+---
+
+## ⚙️ Installation
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 👨‍💻 Development Team
+
+| Name | Roll Number | Role |
+|------|------------|------|
+| Anu Dutta | 11800122063 | Team Leader |
+| Md Samim Akhter | 11800123038 | Team Member |
+| Tanushree Sen | 11800123056 | Team Member |
+| Suvrojit Ghosh | 11800122066 | Team Member |
+| Md Shoaib Akhtar Ansari | 11800123039 | Team Member |
+
+---
+
+## 🎓 Academic Information
+
+Bachelor of Technology (B.Tech)
+
+Computer Science & Engineering
+
+Final Year Project
+
+---
+
+## 📄 License
+
+This project is developed for academic and educational purposes only.
